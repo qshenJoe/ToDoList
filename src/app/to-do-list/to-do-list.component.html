@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 d-sm-block text-white">
+            <h1 class="display-4 mb-3">
+                Start Your <strong>To Do</strong> List <br> Right Now
+                <i class="fa fa-book"></i>
+            </h1>
+            <div class="" id="cardDeck">
+                <div class="container">
+                    <div class="row">
+                        <div class="card-deck">
+                            <app-to-do-list-item
+                                *ngFor="let item of items"
+                                [item]="item"
+                                (decreasement)="onCountDecrease($event)"
+                                >
+                            </app-to-do-list-item>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-4 d-sm-block d-md-block d-xs-block text-white">
+            <app-edit-item
+             (itemAdded)="onItemAdded($event)"
+             (increasement)="onCountIncrease($event)"
+             ></app-edit-item>
+        </div>        
+    </div>
+</div>
+
+<div class="fixed-top d-none" #alert id="alert">
+    <div class="alert alert-primary">
+        <button class="btn close" (click)="onClose()" id="close">
+            <span>&times;</span>
+        </button>
+        <Strong>WARNING: </Strong>Finish Your Current List First :)
+    </div>
+</div>

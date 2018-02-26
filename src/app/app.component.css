@@ -1,0 +1,22 @@
+/* #header {
+    background-image: url(../assets/img/bgImage.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 775px;
+} */
+
+#header .dark-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    background-size: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    min-height: 900px;
+}
+
+#header .header-inner {
+    padding-top: 100px;
+}
+

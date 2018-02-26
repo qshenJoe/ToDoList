@@ -1,0 +1,14 @@
+<form>
+  <div class="form-group">
+      <label for="title">TITLE</label>
+      <input type="text" class="form-control" id="title" #titleInput placeholder="Enter Title...">
+  </div>
+  <div class="form-group">
+      <label for="content">CONTENT</label>
+      <textarea class="form-control" id="content" #contentInput placeholder="Enter Content..."></textarea>
+  </div>
+</form>
+<div class="" id="button-group" class="text-right">
+  <button class="btn btn-success mr-2" (click)="onAddItem()">Add</button>
+  <button class="btn btn-danger mr-2" (click)="onClearInput()">Clear</button>
+</div>
